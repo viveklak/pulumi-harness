@@ -42,6 +42,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &User{}
 	case "harness:index/userGroup:UserGroup":
 		r = &UserGroup{}
+	case "harness:index/userGroupPermissions:UserGroupPermissions":
+		r = &UserGroupPermissions{}
 	case "harness:index/yamlConfig:YamlConfig":
 		r = &YamlConfig{}
 	default:
@@ -125,6 +127,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"harness",
 		"index/userGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"harness",
+		"index/userGroupPermissions",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

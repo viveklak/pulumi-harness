@@ -39,7 +39,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using secret sshkey id
+    /// Import using secret sshkey id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/serviceAccount:ServiceAccount example &lt;service_account_id&gt;

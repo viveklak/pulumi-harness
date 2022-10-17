@@ -15,6 +15,7 @@ from .get_application import *
 from .get_current_account import *
 from .get_delegate import *
 from .get_encrypted_text import *
+from .get_environment import *
 from .get_git_connector import *
 from .get_secret_manager import *
 from .get_service import *
@@ -29,6 +30,7 @@ from .provider import *
 from .ssh_credential import *
 from .user import *
 from .user_group import *
+from .user_group_permissions import *
 from .yaml_config import *
 from ._inputs import *
 from . import outputs
@@ -194,6 +196,14 @@ _utilities.register(
   "fqn": "lbrlabs_pulumi_harness",
   "classes": {
    "harness:index/userGroup:UserGroup": "UserGroup"
+  }
+ },
+ {
+  "pkg": "harness",
+  "mod": "index/userGroupPermissions",
+  "fqn": "lbrlabs_pulumi_harness",
+  "classes": {
+   "harness:index/userGroupPermissions:UserGroupPermissions": "UserGroupPermissions"
   }
  },
  {

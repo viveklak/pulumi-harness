@@ -49,6 +49,7 @@ __all__ = [
     'UserGroupPermissionsAppPermissionsWorkflow',
     'UserGroupSamlSettings',
     'GetEncryptedTextUsageScopeResult',
+    'GetEnvironmentVariableOverrideResult',
     'GetGitConnectorCommitDetailResult',
     'GetSecretManagerUsageScopeResult',
     'GetSshCredentialUsageScopeResult',
@@ -2144,6 +2145,16 @@ class UserGroupPermissionsAppPermissions(dict):
                  services: Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsService']] = None,
                  templates: Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsTemplate']] = None,
                  workflows: Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsWorkflow']] = None):
+        """
+        :param Sequence['UserGroupPermissionsAppPermissionsAllArgs'] alls: The permission to perform actions against all resources.
+        :param Sequence['UserGroupPermissionsAppPermissionsDeploymentArgs'] deployments: Permission configuration to perform actions against deployments.
+        :param Sequence['UserGroupPermissionsAppPermissionsEnvironmentArgs'] environments: Permission configuration to perform actions against workflows.
+        :param Sequence['UserGroupPermissionsAppPermissionsPipelineArgs'] pipelines: Permission configuration to perform actions against pipelines.
+        :param Sequence['UserGroupPermissionsAppPermissionsProvisionerArgs'] provisioners: Permission configuration to perform actions against provisioners.
+        :param Sequence['UserGroupPermissionsAppPermissionsServiceArgs'] services: Permission configuration to perform actions against services.
+        :param Sequence['UserGroupPermissionsAppPermissionsTemplateArgs'] templates: Permission configuration to perform actions against templates.
+        :param Sequence['UserGroupPermissionsAppPermissionsWorkflowArgs'] workflows: Permission configuration to perform actions against workflows.
+        """
         if alls is not None:
             pulumi.set(__self__, "alls", alls)
         if deployments is not None:
@@ -2164,41 +2175,65 @@ class UserGroupPermissionsAppPermissions(dict):
     @property
     @pulumi.getter
     def alls(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsAll']]:
+        """
+        The permission to perform actions against all resources.
+        """
         return pulumi.get(self, "alls")
 
     @property
     @pulumi.getter
     def deployments(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsDeployment']]:
+        """
+        Permission configuration to perform actions against deployments.
+        """
         return pulumi.get(self, "deployments")
 
     @property
     @pulumi.getter
     def environments(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsEnvironment']]:
+        """
+        Permission configuration to perform actions against workflows.
+        """
         return pulumi.get(self, "environments")
 
     @property
     @pulumi.getter
     def pipelines(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsPipeline']]:
+        """
+        Permission configuration to perform actions against pipelines.
+        """
         return pulumi.get(self, "pipelines")
 
     @property
     @pulumi.getter
     def provisioners(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsProvisioner']]:
+        """
+        Permission configuration to perform actions against provisioners.
+        """
         return pulumi.get(self, "provisioners")
 
     @property
     @pulumi.getter
     def services(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsService']]:
+        """
+        Permission configuration to perform actions against services.
+        """
         return pulumi.get(self, "services")
 
     @property
     @pulumi.getter
     def templates(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsTemplate']]:
+        """
+        Permission configuration to perform actions against templates.
+        """
         return pulumi.get(self, "templates")
 
     @property
     @pulumi.getter
     def workflows(self) -> Optional[Sequence['outputs.UserGroupPermissionsAppPermissionsWorkflow']]:
+        """
+        Permission configuration to perform actions against workflows.
+        """
         return pulumi.get(self, "workflows")
 
 
@@ -2677,6 +2712,57 @@ class GetEncryptedTextUsageScopeResult(dict):
         Id of the id of the specific environment to scope to. Cannot be used with `environment_filter_type`.
         """
         return pulumi.get(self, "environment_id")
+
+
+@pulumi.output_type
+class GetEnvironmentVariableOverrideResult(dict):
+    def __init__(__self__, *,
+                 name: str,
+                 service_name: str,
+                 type: str,
+                 value: str):
+        """
+        :param str name: The name of the variable
+        :param str service_name: The name of the service
+        :param str type: The type of the service variable. Valid values are `TEXT` and `ENCRYPTED_TEXT`
+        :param str value: The value of the service variable
+        """
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "service_name", service_name)
+        pulumi.set(__self__, "type", type)
+        pulumi.set(__self__, "value", value)
+
+    @property
+    @pulumi.getter
+    def name(self) -> str:
+        """
+        The name of the variable
+        """
+        return pulumi.get(self, "name")
+
+    @property
+    @pulumi.getter(name="serviceName")
+    def service_name(self) -> str:
+        """
+        The name of the service
+        """
+        return pulumi.get(self, "service_name")
+
+    @property
+    @pulumi.getter
+    def type(self) -> str:
+        """
+        The type of the service variable. Valid values are `TEXT` and `ENCRYPTED_TEXT`
+        """
+        return pulumi.get(self, "type")
+
+    @property
+    @pulumi.getter
+    def value(self) -> str:
+        """
+        The value of the service variable
+        """
+        return pulumi.get(self, "value")
 
 
 @pulumi.output_type

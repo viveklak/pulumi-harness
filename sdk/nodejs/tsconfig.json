@@ -34,6 +34,7 @@
         "getCurrentAccount.ts",
         "getDelegate.ts",
         "getEncryptedText.ts",
+        "getEnvironment.ts",
         "getGitConnector.ts",
         "getSecretManager.ts",
         "getService.ts",
@@ -137,6 +138,7 @@
         "types/output.ts",
         "user.ts",
         "userGroup.ts",
+        "userGroupPermissions.ts",
         "utilities.ts",
         "yamlConfig.ts"
     ]

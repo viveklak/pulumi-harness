@@ -54,7 +54,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using input set id
+    /// Import using input set id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/inputSet:InputSet example &lt;input_set_id&gt;

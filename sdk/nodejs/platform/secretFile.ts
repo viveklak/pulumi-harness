@@ -24,7 +24,7 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
- * # Import using secret file id
+ * Import using secret file id
  *
  * ```sh
  *  $ pulumi import harness:platform/secretFile:SecretFile example <secret_file_id>

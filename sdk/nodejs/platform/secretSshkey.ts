@@ -88,7 +88,7 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
- * # Import using secret sshkey id
+ * Import using secret sshkey id
  *
  * ```sh
  *  $ pulumi import harness:platform/secretSshkey:SecretSshkey example <secret_sshkey_id>

@@ -70,7 +70,7 @@ import (
 //
 // ## Import
 //
-// # Import using the Harness kubernetes cloud provider id.
+// Import using the Harness kubernetes cloud provider id.
 //
 // ```sh
 //

@@ -54,6 +54,25 @@ export interface GetEncryptedTextUsageScope {
     environmentId?: string;
 }
 
+export interface GetEnvironmentVariableOverride {
+    /**
+     * The name of the variable
+     */
+    name: string;
+    /**
+     * The name of the service
+     */
+    serviceName: string;
+    /**
+     * The type of the service variable. Valid values are `TEXT` and `ENCRYPTED_TEXT`
+     */
+    type: string;
+    /**
+     * The value of the service variable
+     */
+    value: string;
+}
+
 export interface GetGitConnectorCommitDetail {
     authorEmailId: string;
     authorName: string;
@@ -583,13 +602,37 @@ export interface UserGroupPermissions {
 }
 
 export interface UserGroupPermissionsAppPermissions {
+    /**
+     * The permission to perform actions against all resources.
+     */
     alls?: outputs.UserGroupPermissionsAppPermissionsAll[];
+    /**
+     * Permission configuration to perform actions against deployments.
+     */
     deployments?: outputs.UserGroupPermissionsAppPermissionsDeployment[];
+    /**
+     * Permission configuration to perform actions against workflows.
+     */
     environments?: outputs.UserGroupPermissionsAppPermissionsEnvironment[];
+    /**
+     * Permission configuration to perform actions against pipelines.
+     */
     pipelines?: outputs.UserGroupPermissionsAppPermissionsPipeline[];
+    /**
+     * Permission configuration to perform actions against provisioners.
+     */
     provisioners?: outputs.UserGroupPermissionsAppPermissionsProvisioner[];
+    /**
+     * Permission configuration to perform actions against services.
+     */
     services?: outputs.UserGroupPermissionsAppPermissionsService[];
+    /**
+     * Permission configuration to perform actions against templates.
+     */
     templates?: outputs.UserGroupPermissionsAppPermissionsTemplate[];
+    /**
+     * Permission configuration to perform actions against workflows.
+     */
     workflows?: outputs.UserGroupPermissionsAppPermissionsWorkflow[];
 }
 

@@ -67,7 +67,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using trigger id
+    /// Import using trigger id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/triggers:Triggers example &lt;triggers_id&gt;

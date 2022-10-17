@@ -3,6 +3,7 @@ module github.com/lbrlabs/pulumi-harness/provider
 go 1.19
 
 replace (
+	#github.com/pulumi/pulumi-terraform-bridge/v3 => /Users/vivek/code/pulumi-terraform-bridge
 	github.com/harness/terraform-provider-harness/shim => ./shim
 	github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20220824175045-450992f2f5b9
 	github.com/pulumi/pulumi/pkg/v3 => github.com/pulumi/pulumi/pkg/v3 v3.40.1
@@ -10,7 +11,7 @@ replace (
 
 require (
 	github.com/harness/terraform-provider-harness/shim v0.0.0
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.30.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.32.0
 	github.com/pulumi/pulumi/sdk/v3 v3.40.2
 )
 
@@ -135,6 +136,7 @@ require (
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/kevinburke/ssh_config v1.1.0 // indirect
 	github.com/klauspost/compress v1.13.5 // indirect
+	github.com/kr/pretty v0.3.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-ieproxy v0.0.1 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
@@ -163,11 +165,12 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/posener/complete v1.2.3 // indirect
 	github.com/pulumi/pulumi-java/pkg v0.6.0 // indirect
-	github.com/pulumi/pulumi-yaml v0.5.5 // indirect
-	github.com/pulumi/pulumi/pkg/v3 v3.39.0 // indirect
+	github.com/pulumi/pulumi-yaml v0.5.8 // indirect
+	github.com/pulumi/pulumi/pkg/v3 v3.40.2 // indirect
+	github.com/pulumi/schema-tools v0.1.0 // indirect
 	github.com/pulumi/terraform-diff-reader v0.0.0-20201211191010-ad4715e9285e // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
-	github.com/rogpeppe/go-internal v1.8.1 // indirect
+	github.com/rogpeppe/go-internal v1.9.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/ryanuber/go-glob v1.0.0 // indirect
 	github.com/sabhiram/go-gitignore v0.0.0-20210923224102-525f6e181f06 // indirect

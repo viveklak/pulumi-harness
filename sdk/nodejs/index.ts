@@ -45,6 +45,10 @@ export { GetEncryptedTextArgs, GetEncryptedTextResult, GetEncryptedTextOutputArg
 export const getEncryptedText: typeof import("./getEncryptedText").getEncryptedText = null as any;
 export const getEncryptedTextOutput: typeof import("./getEncryptedText").getEncryptedTextOutput = null as any;
 
+export { GetEnvironmentArgs, GetEnvironmentResult, GetEnvironmentOutputArgs } from "./getEnvironment";
+export const getEnvironment: typeof import("./getEnvironment").getEnvironment = null as any;
+export const getEnvironmentOutput: typeof import("./getEnvironment").getEnvironmentOutput = null as any;
+
 export { GetGitConnectorArgs, GetGitConnectorResult, GetGitConnectorOutputArgs } from "./getGitConnector";
 export const getGitConnector: typeof import("./getGitConnector").getGitConnector = null as any;
 export const getGitConnectorOutput: typeof import("./getGitConnector").getGitConnectorOutput = null as any;
@@ -101,6 +105,10 @@ export { UserGroupArgs, UserGroupState } from "./userGroup";
 export type UserGroup = import("./userGroup").UserGroup;
 export const UserGroup: typeof import("./userGroup").UserGroup = null as any;
 
+export { UserGroupPermissionsArgs, UserGroupPermissionsState } from "./userGroupPermissions";
+export type UserGroupPermissions = import("./userGroupPermissions").UserGroupPermissions;
+export const UserGroupPermissions: typeof import("./userGroupPermissions").UserGroupPermissions = null as any;
+
 export { YamlConfigArgs, YamlConfigState } from "./yamlConfig";
 export type YamlConfig = import("./yamlConfig").YamlConfig;
 export const YamlConfig: typeof import("./yamlConfig").YamlConfig = null as any;
@@ -115,6 +123,7 @@ utilities.lazyLoad(exports, ["getApplication","getApplicationOutput"], () => req
 utilities.lazyLoad(exports, ["getCurrentAccount","getCurrentAccountOutput"], () => require("./getCurrentAccount"));
 utilities.lazyLoad(exports, ["getDelegate","getDelegateOutput"], () => require("./getDelegate"));
 utilities.lazyLoad(exports, ["getEncryptedText","getEncryptedTextOutput"], () => require("./getEncryptedText"));
+utilities.lazyLoad(exports, ["getEnvironment","getEnvironmentOutput"], () => require("./getEnvironment"));
 utilities.lazyLoad(exports, ["getGitConnector","getGitConnectorOutput"], () => require("./getGitConnector"));
 utilities.lazyLoad(exports, ["getSecretManager","getSecretManagerOutput"], () => require("./getSecretManager"));
 utilities.lazyLoad(exports, ["getService","getServiceOutput"], () => require("./getService"));
@@ -129,6 +138,7 @@ utilities.lazyLoad(exports, ["Provider"], () => require("./provider"));
 utilities.lazyLoad(exports, ["SshCredential"], () => require("./sshCredential"));
 utilities.lazyLoad(exports, ["User"], () => require("./user"));
 utilities.lazyLoad(exports, ["UserGroup"], () => require("./userGroup"));
+utilities.lazyLoad(exports, ["UserGroupPermissions"], () => require("./userGroupPermissions"));
 utilities.lazyLoad(exports, ["YamlConfig"], () => require("./yamlConfig"));
 
 // Export sub-modules:
@@ -172,6 +182,8 @@ const _module = {
                 return new User(name, <any>undefined, { urn })
             case "harness:index/userGroup:UserGroup":
                 return new UserGroup(name, <any>undefined, { urn })
+            case "harness:index/userGroupPermissions:UserGroupPermissions":
+                return new UserGroupPermissions(name, <any>undefined, { urn })
             case "harness:index/yamlConfig:YamlConfig":
                 return new YamlConfig(name, <any>undefined, { urn })
             default:
@@ -190,6 +202,7 @@ pulumi.runtime.registerResourceModule("harness", "index/infrastructureDefinition
 pulumi.runtime.registerResourceModule("harness", "index/sshCredential", _module)
 pulumi.runtime.registerResourceModule("harness", "index/user", _module)
 pulumi.runtime.registerResourceModule("harness", "index/userGroup", _module)
+pulumi.runtime.registerResourceModule("harness", "index/userGroupPermissions", _module)
 pulumi.runtime.registerResourceModule("harness", "index/yamlConfig", _module)
 pulumi.runtime.registerResourcePackage("harness", {
     version: utilities.getVersion(),

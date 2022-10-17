@@ -315,7 +315,7 @@ class ServiceAccount(pulumi.CustomResource):
 
         ## Import
 
-        # Import using secret sshkey id
+        Import using secret sshkey id
 
         ```sh
          $ pulumi import harness:platform/serviceAccount:ServiceAccount example <service_account_id>
@@ -357,7 +357,7 @@ class ServiceAccount(pulumi.CustomResource):
 
         ## Import
 
-        # Import using secret sshkey id
+        Import using secret sshkey id
 
         ```sh
          $ pulumi import harness:platform/serviceAccount:ServiceAccount example <service_account_id>

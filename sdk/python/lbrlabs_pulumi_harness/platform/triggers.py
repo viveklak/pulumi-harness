@@ -409,7 +409,7 @@ class Triggers(pulumi.CustomResource):
 
         ## Import
 
-        # Import using trigger id
+        Import using trigger id
 
         ```sh
          $ pulumi import harness:platform/triggers:Triggers example <triggers_id>
@@ -484,7 +484,7 @@ class Triggers(pulumi.CustomResource):
 
         ## Import
 
-        # Import using trigger id
+        Import using trigger id
 
         ```sh
          $ pulumi import harness:platform/triggers:Triggers example <triggers_id>

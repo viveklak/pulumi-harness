@@ -80,7 +80,7 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
- * # Import using kubernetes connector id
+ * Import using kubernetes connector id
  *
  * ```sh
  *  $ pulumi import harness:platform/kubernetesConnector:KubernetesConnector example <connector_id>

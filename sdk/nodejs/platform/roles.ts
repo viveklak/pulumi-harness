@@ -24,7 +24,7 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
- * # Import using roles id
+ * Import using roles id
  *
  * ```sh
  *  $ pulumi import harness:platform/roles:Roles example <roles_id>

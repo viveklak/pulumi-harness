@@ -134,7 +134,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using kubernetes connector id
+    /// Import using kubernetes connector id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/kubernetesConnector:KubernetesConnector example &lt;connector_id&gt;

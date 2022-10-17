@@ -24,7 +24,7 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
- * # Import using secret sshkey id
+ * Import using secret sshkey id
  *
  * ```sh
  *  $ pulumi import harness:platform/serviceAccount:ServiceAccount example <service_account_id>

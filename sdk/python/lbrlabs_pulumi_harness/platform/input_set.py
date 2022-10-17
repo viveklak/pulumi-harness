@@ -328,7 +328,7 @@ class InputSet(pulumi.CustomResource):
 
         ## Import
 
-        # Import using input set id
+        Import using input set id
 
         ```sh
          $ pulumi import harness:platform/inputSet:InputSet example <input_set_id>
@@ -385,7 +385,7 @@ class InputSet(pulumi.CustomResource):
 
         ## Import
 
-        # Import using input set id
+        Import using input set id
 
         ```sh
          $ pulumi import harness:platform/inputSet:InputSet example <input_set_id>

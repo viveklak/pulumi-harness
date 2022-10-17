@@ -15,7 +15,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using resource group id
+    /// Import using resource group id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/resourceGroup:ResourceGroup example &lt;resource_group_id&gt;

@@ -25,7 +25,7 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
- * # Import using secret text id
+ * Import using secret text id
  *
  * ```sh
  *  $ pulumi import harness:platform/secretText:SecretText example <secret_text_id>

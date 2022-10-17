@@ -45,7 +45,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using roles id
+    /// Import using roles id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/roles:Roles example &lt;roles_id&gt;

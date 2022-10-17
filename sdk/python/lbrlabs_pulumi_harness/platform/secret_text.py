@@ -347,7 +347,7 @@ class SecretText(pulumi.CustomResource):
 
         ## Import
 
-        # Import using secret text id
+        Import using secret text id
 
         ```sh
          $ pulumi import harness:platform/secretText:SecretText example <secret_text_id>
@@ -391,7 +391,7 @@ class SecretText(pulumi.CustomResource):
 
         ## Import
 
-        # Import using secret text id
+        Import using secret text id
 
         ```sh
          $ pulumi import harness:platform/secretText:SecretText example <secret_text_id>

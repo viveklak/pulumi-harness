@@ -401,7 +401,7 @@ class ResourceGroup(pulumi.CustomResource):
 
         ## Import
 
-        # Import using resource group id
+        Import using resource group id
 
         ```sh
          $ pulumi import harness:platform/resourceGroup:ResourceGroup example <resource_group_id>
@@ -432,7 +432,7 @@ class ResourceGroup(pulumi.CustomResource):
 
         ## Import
 
-        # Import using resource group id
+        Import using resource group id
 
         ```sh
          $ pulumi import harness:platform/resourceGroup:ResourceGroup example <resource_group_id>

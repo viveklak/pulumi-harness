@@ -315,7 +315,7 @@ class Roles(pulumi.CustomResource):
 
         ## Import
 
-        # Import using roles id
+        Import using roles id
 
         ```sh
          $ pulumi import harness:platform/roles:Roles example <roles_id>
@@ -357,7 +357,7 @@ class Roles(pulumi.CustomResource):
 
         ## Import
 
-        # Import using roles id
+        Import using roles id
 
         ```sh
          $ pulumi import harness:platform/roles:Roles example <roles_id>

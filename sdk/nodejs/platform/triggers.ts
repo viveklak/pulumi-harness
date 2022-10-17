@@ -54,7 +54,7 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
- * # Import using trigger id
+ * Import using trigger id
  *
  * ```sh
  *  $ pulumi import harness:platform/triggers:Triggers example <triggers_id>

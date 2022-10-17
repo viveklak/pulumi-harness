@@ -131,7 +131,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using secret sshkey id
+    /// Import using secret sshkey id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/secretSshkey:SecretSshkey example &lt;secret_sshkey_id&gt;

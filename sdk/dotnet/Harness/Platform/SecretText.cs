@@ -40,7 +40,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using secret text id
+    /// Import using secret text id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/secretText:SecretText example &lt;secret_text_id&gt;

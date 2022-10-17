@@ -69,6 +69,44 @@ export interface GetEncryptedTextUsageScopeArgs {
     environmentId?: pulumi.Input<string>;
 }
 
+export interface GetEnvironmentVariableOverride {
+    /**
+     * The name of the variable
+     */
+    name?: string;
+    /**
+     * The name of the service
+     */
+    serviceName?: string;
+    /**
+     * The type of the service variable. Valid values are `TEXT` and `ENCRYPTED_TEXT`
+     */
+    type?: string;
+    /**
+     * The value of the service variable
+     */
+    value?: string;
+}
+
+export interface GetEnvironmentVariableOverrideArgs {
+    /**
+     * The name of the variable
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The name of the service
+     */
+    serviceName?: pulumi.Input<string>;
+    /**
+     * The type of the service variable. Valid values are `TEXT` and `ENCRYPTED_TEXT`
+     */
+    type?: pulumi.Input<string>;
+    /**
+     * The value of the service variable
+     */
+    value?: pulumi.Input<string>;
+}
+
 export interface GetSecretManagerUsageScope {
     /**
      * Id of the application to scope to. If empty then this scope applies to all applications.
@@ -99,21 +137,6 @@ export interface GetSecretManagerUsageScopeArgs {
     environmentId?: pulumi.Input<string>;
 }
 
-export interface GetSshCredentialUsageScope {
-    /**
-     * Id of the application to scope to. If empty then this scope applies to all applications.
-     */
-    applicationId?: string;
-    /**
-     * Type of environment filter applied. Cannot be used with `environmentId`. Valid options are NON*PRODUCTION*ENVIRONMENTS, PRODUCTION_ENVIRONMENTS.
-     */
-    environmentFilterType?: string;
-    /**
-     * Id of the id of the specific environment to scope to. Cannot be used with `environmentFilterType`.
-     */
-    environmentId?: string;
-}
-
 export interface GetSshCredentialUsageScopeArgs {
     /**
      * Id of the application to scope to. If empty then this scope applies to all applications.
@@ -127,6 +150,21 @@ export interface GetSshCredentialUsageScopeArgs {
      * Id of the id of the specific environment to scope to. Cannot be used with `environmentFilterType`.
      */
     environmentId?: pulumi.Input<string>;
+}
+
+export interface GetSshCredentialUsageScope {
+    /**
+     * Id of the application to scope to. If empty then this scope applies to all applications.
+     */
+    applicationId?: string;
+    /**
+     * Type of environment filter applied. Cannot be used with `environmentId`. Valid options are NON*PRODUCTION*ENVIRONMENTS, PRODUCTION_ENVIRONMENTS.
+     */
+    environmentFilterType?: string;
+    /**
+     * Id of the id of the specific environment to scope to. Cannot be used with `environmentFilterType`.
+     */
+    environmentId?: string;
 }
 
 export interface GitConnectorCommitDetails {
@@ -622,13 +660,37 @@ export interface UserGroupPermissions {
 }
 
 export interface UserGroupPermissionsAppPermissions {
+    /**
+     * The permission to perform actions against all resources.
+     */
     alls?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsAll>[]>;
+    /**
+     * Permission configuration to perform actions against deployments.
+     */
     deployments?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsDeployment>[]>;
+    /**
+     * Permission configuration to perform actions against workflows.
+     */
     environments?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsEnvironment>[]>;
+    /**
+     * Permission configuration to perform actions against pipelines.
+     */
     pipelines?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsPipeline>[]>;
+    /**
+     * Permission configuration to perform actions against provisioners.
+     */
     provisioners?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsProvisioner>[]>;
+    /**
+     * Permission configuration to perform actions against services.
+     */
     services?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsService>[]>;
+    /**
+     * Permission configuration to perform actions against templates.
+     */
     templates?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsTemplate>[]>;
+    /**
+     * Permission configuration to perform actions against workflows.
+     */
     workflows?: pulumi.Input<pulumi.Input<inputs.UserGroupPermissionsAppPermissionsWorkflow>[]>;
 }
 

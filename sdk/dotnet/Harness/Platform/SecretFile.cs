@@ -39,7 +39,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using secret file id
+    /// Import using secret file id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/secretFile:SecretFile example &lt;secret_file_id&gt;

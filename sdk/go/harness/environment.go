@@ -84,7 +84,7 @@ import (
 //
 // ## Import
 //
-// # Import using the Harness application id and environment id.
+// Import using the Harness application id and environment id.
 //
 // ```sh
 //

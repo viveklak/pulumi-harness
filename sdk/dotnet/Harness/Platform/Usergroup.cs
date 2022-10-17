@@ -68,7 +68,7 @@ namespace Lbrlabs.PulumiPackage.Harness.Platform
     /// 
     /// ## Import
     /// 
-    /// # Import using user group id
+    /// Import using user group id
     /// 
     /// ```sh
     ///  $ pulumi import harness:platform/usergroup:Usergroup example &lt;usergroup_id&gt;
